@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 07</title>
+<script type="text/javascript">
+	var enter = "<br />";
+	var str = new String("JavaScript is very easy"); 
+	
+	/* 
+		->
+		JavaScript is very verysy
+		0123456789012345678901234567
+								  -1
+								  <-
+	*/
+	
+	document.write("input: " + str + enter);
+	
+	// substr(start,length) : Trích xuất chuỗi từ vị trí s đến vị trí s+l-1
+	
+	
+	// Không truyền length
+	document.write("substr(0): " + str.substr(0) + enter); 
+	
+	// Truyền length >0
+	document.write("substr(0,2): " + str.substr(0,8) + enter);  // 0 -> 0+8-1 JavaScri
+	
+	// Truyền length >0
+	document.write("substr(0,2): " + str.substr(0,8) + enter);  // 0 -> 0+8-1 JavaScri
+	
+	document.write("substr(-5,3): " + str.substr(-5,3) + enter);  // -5 -> -3  ea
+</script>

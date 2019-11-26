@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 04</title>
+<script type="text/javascript">
+	
+	/*
+		Output encodeURI: http://www.zend.vn/%20my%20function.php?a=2&b=1$#
+		Output encodeURIComponent: http%3A%2F%2Fwww.zend.vn%2F%20my%20function.php%3Fa%3D2%26b%3D1%24%23
+	*/
+	var str1 = "http://www.zend.vn/%20my%20function.php?a=2&b=1$#";
+	var str2 = "http%3A%2F%2Fwww.zend.vn%2F%20my%20function.php%3Fa%3D2%26b%3D1%24%23";
+	var enter = "<br />";
+	
+	document.write("Input: " + str2 + enter);
+	document.write("Output str1: " + decodeURI(str2) + enter);
+
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

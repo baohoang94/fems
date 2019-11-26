@@ -1,0 +1,16 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.clr {
+	clear: both;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, ul li {
+	list-style: none;	
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Box E - circle title</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/reset.css">
+<style type="text/css">
+	
+	#tab-A {
+		width: 600px;
+		border: 2px solid #F00;
+		margin: 30px auto;
+		padding: 10px;
+	}
+	
+	#tab-A .tabs{
+		list-style: none;
+	}
+	
+	#tab-A .tabs li{
+		float: left;
+		margin-right: 2px;
+		border: 1px solid #666;
+	}
+	
+	#tab-A .tabs li a{
+		text-decoration: none;
+		display: block;
+		padding: 2px 10px;
+	}
+	
+	#tab-A .tabs li a:hover, #tab-A .tabs li a.current{
+		background-color: #0F9;
+		color: #00C;
+	}
+	
+	#tab-A .box-wrapper{
+		border: 1px solid #666;
+		height: 140px;
+		text-align: justify;
+		margin-top: -1px;
+	}
+	
+	#tab-A .box-wrapper .tab-box{
+		display: none;
+		padding: 10px;
+	}
+	
+	#tab-A .box-wrapper .current{
+		display: block;
+	}
+</style>
+</head>
+<body>
+    <div class="detail">
+		<div class="title">Tab A</div>
+        
+        <!-- MIÊU TẢ -->
+        <div class="box">
+        	<div class="note">Miêu tả</div>
+            <div class="desc">
+            	Joomla! cms là một hệ thống quản lý dữ liệu được đánh giá rất cao hiện nay, Joomla rất dễ sử dụng để xây dựng một website và rất thân thiện với người sử dụng. Nhưng để lập trình tạo ra các thành phần mở rộng như Component, Module, Plugin, Template... cho Joomla thì không đơn giản một chút nào vì cấu trúc Joomla! cm
+            </div>
+		</div> 
+        
+        <div class="box">     
+        	<div class="note">Demo</div>
+            <div class="desc demo">
+            <div class="right">
+            	<div id="tab-A">
+                    <ul class="tabs">
+                        <li><a href="#">PHP Script</a></li>
+                        <li><a href="#" >ASP Script</a></li>
+                        <li><a href="#" class="current">JSP Script</a></li>
+                    </ul>
+                    <div class="clr"></div>
+            
+                    <div class="box-wrapper">
+                        <div class="tab-box">
+                            PHP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <div class="tab-box ">
+                            ASP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <div class="tab-box current">
+                            JSP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>    
+        
+        <div class="box">     
+        	<div class="note">Mã nguồn</div>
+            <div class="desc">
+            	<div class="code">
+                    <span>HTML</span>
+          <textarea style="height: 350px">
+<div id="tab-A">
+    <ul class="tabs">
+        <li><a href="#">PHP Script</a></li>
+        <li><a href="#" >ASP Script</a></li>
+        <li><a href="#" class="current">JSP Script</a></li>
+    </ul>
+    <div class="clr"></div>
+
+    <div class="box-wrapper">
+        <div class="tab-box">
+            PHP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <div class="tab-box ">
+            ASP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        <div class="tab-box current">
+            JSP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+    </div>
+
+</div>
+</textarea>
+	  		</div>
+                
+                <div class="code">
+                    <span>CSS</span>
+                    <textarea style="height: 620px">
+#tab-A {
+    width: 600px;
+    border: 2px solid #F00;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+#tab-A .tabs{
+    list-style: none;
+}
+
+#tab-A .tabs li{
+    float: left;
+    margin-right: 2px;
+    border: 1px solid #666;
+}
+
+#tab-A .tabs li a{
+    text-decoration: none;
+    display: block;
+    padding: 2px 10px;
+}
+
+#tab-A .tabs li a:hover, #tab-A .tabs li a.current{
+    background-color: #0F9;
+    color: #00C;
+}
+
+#tab-A .box-wrapper{
+    border: 1px solid #666;
+    height: 140px;
+    text-align: justify;
+    margin-top: -1px;
+}
+
+#tab-A .box-wrapper .tab-box{
+    display: none;
+    padding: 10px;
+}
+
+#tab-A .box-wrapper .current{
+    display: block;
+}
+
+                    </textarea>
+				</div>
+</div>
+        </div>
+    </div>
+</body>
+</html>

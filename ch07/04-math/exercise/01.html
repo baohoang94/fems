@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 01</title>
+<script type="text/javascript">
+	var imgList = new Array();
+	imgList[0]	= "images/01.jpg";
+	imgList[1]	= "images/02.jpg";
+	imgList[2]	= "images/03.jpg";
+	imgList[3]	= "images/04.jpg";
+	imgList[4]	= "images/05.jpg";
+	
+	function showImage(){
+		var index = Math.floor(Math.random()*imgList.length);
+		var result = '<img src="' + imgList[index] + '" />';
+		document.getElementById("area-image").innerHTML = result;
+	}
+	
+</script>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.content {
+		margin: 10px auto;
+		text-align: center;
+		width: 600px;
+		height: 400px;
+	}
+	
+	.content input[type=button]{
+		padding: 3px 8px;
+		margin-bottom: 10px;
+	}
+	
+	.content #area-image{
+		border: 2px solid #999;
+		padding: 10px;
+		display: inline-block;
+	}
+</style>
+</head>
+
+<body>
+	<div class="content">
+    	<input type="button" value="Random image" onclick="showImage();" />
+        <div id="area-image">
+        	<img src="images/01.jpg" />
+        </div>
+    </div>
+	
+</body>
+</html>

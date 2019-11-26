@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 02</title>
+</head>
+<script type="text/javascript">
+	/*
+		12385	=> Output 8
+		
+		12385	=> max = 5, n = 1238
+		1238	=> max = 8, n = 123
+		123		=> max = 8, n = 12
+		12		=> max = 8, n = 1
+		1		=> max = 8
+		
+	*/
+	var n = new Number(19385); 
+	var enter = "<br />";
+	
+	
+	Number.prototype.getMaxDigit = function(){
+		var number = this.valueOf();
+		var max = 0
+		while ( number > 0 ) {
+			var donvi = number % 10;
+			max = (donvi > max) ? donvi : max;
+			number = (number-donvi) / 10;
+		}
+		return max;
+	}
+	
+	document.write("Chữ số lớn nhất: " + n.getMaxDigit() + enter);
+</script>
+<body>
+</body>
+</html>

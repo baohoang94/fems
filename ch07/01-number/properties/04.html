@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 04</title>
+<script type="text/javascript">
+
+	var n = new Number(12); // var n = 12
+	var enter = "<br />";
+	
+	
+	//document.write("Phep chia n/String: " + n/"dáds");
+	
+	// Thuc hiện phép chia hai số, nếu số chia là chuỗi -> xuất ra thông báo
+	/*
+	document.write("isNaN(12): " + isNaN(12) + enter);
+	document.write("isNaN(dsd): " + isNaN("dsds") + enter);
+	document.write("isNaN(1.3232): " + isNaN(1.3232) + enter);
+	*/
+	var a = 12;
+	var b = "dss";
+	
+	var result;
+	if(isNaN(a/b)) {
+		result = "Phép toán không thực hiện được";
+	}else {
+		result = a/b;
+	}
+	
+	document.write("Kết quả: " + result);
+</script>
+</head>
+
+<body>
+</body>
+</html>

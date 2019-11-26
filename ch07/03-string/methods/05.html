@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 05</title>
+<script type="text/javascript">
+	var enter = "<br />";
+	var str = new String("JavaScript is very easy"); 
+	
+	/* 
+		JavaScript is very very easy
+		0123456789012345678901234567
+								  -1
+	*/
+	
+	// search: Tìm kiếm và trả về vị trí xuất hiện đầu tiên của một giá trị nào đó được tìm kiếm trong chuỗi
+	document.write("input: " + str + enter);
+	
+	// slice(start,end) : Trích xuất chuỗi từ vị trí s đến vị trí e (không lấy giá trị end)
+	
+	
+	// Lấy toàn bộ chuỗi s = 0, e không cần truyền
+	document.write("slice(0): " + str.slice(0) + enter); 
+	
+	// Lấy chuỗi từ s = 3, e không cần truyền
+	document.write("slice(3): " + str.slice(3) + enter); 	// aScript is very very easy
+	
+	// Lấy chuỗi từ vị trí thứ 3 đến vị trí thứ 8: aScrip
+	document.write("slice(3,9): " + str.slice(3,9) + enter);
+		
+	// s = 0 => Lấy ký tự đầu tiên trong chuỗi
+	document.write("slice(0,1): " + str.slice(0,1) + enter);
+	
+	// Lấy ký tự cuối cùng trong chuỗi
+	document.write("slice(-1): " + str.slice(-1) + enter);
+</script>
+</head>
+
+<body>
+</body>
+</html>

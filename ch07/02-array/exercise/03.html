@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 03</title>
+</head>
+<script type="text/javascript">
+	
+	// Loại các phần tử trùng	
+	var students = Array(
+						["Nguyen Van A", [5,6,7]],
+						["Nguyen Van B", [5,3,9]],
+						["Nguyen Van C", [8,2,7]]
+					) 
+	for(x in students){
+		var score = students[x][1];
+		var temp = 0;
+		for(y in score) {
+			temp += score[y]
+		}
+	
+		students[x][1] = Math.floor(temp/score.length);
+		document.write(students[x] + "<br />" );
+	}
+</script>
+<body>
+</body>
+</html>

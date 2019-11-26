@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 04</title>
+<script type="text/javascript">
+	var enter = "<br />";
+	var str = new String("JavaScript is very easy"); 
+	
+	/* 
+		JavaScript is very very easy
+		0123456789012345678901234567
+	*/
+	
+	// search: Tìm kiếm và trả về vị trí xuất hiện đầu tiên của một giá trị nào đó được tìm kiếm trong chuỗi
+	document.write("input: " + str + enter);
+	document.write("search(very): " + str.search("very") + enter); // 14
+	
+	/* match: Tìm kiếm và trả về giá trị được tìm kiếm trong chuỗi nếu giá trị đó tồn tại trong chuỗi
+						và trả về giá trị null nếu giá trị không tồn tại trong chuỗi
+	*/
+	document.write("math(very): " + str.match("very1") + enter);
+	
+	// replace: Tìm kiếm và thay thê giá trị old bằng giá trị new => replace(old,new)
+	
+	document.write("replace(Javascript,HTML): " + str.replace("JavaScript","HTML") + enter);
+</script>
+</head>
+
+<body>
+</body>
+</html>

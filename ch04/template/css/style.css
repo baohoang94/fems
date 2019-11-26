@@ -1,0 +1,153 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.clr {
+	clear: both;
+}
+
+/* ======================================= INDEX =============================================== */
+.main {
+	margin-top: 20px;
+	font-family: Arial, Helvetica, sans-serif; 
+}
+
+.main .tpl_title {
+	font-size: 36px;
+	font-weight: bold;
+	color: #F00;
+	text-align: center;
+}
+
+.main .tpl_list {
+	border-spacing: 0px;
+	width: 1216px;
+	margin: 20px auto;
+}
+
+.main .tpl_list th {
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px 0 0 10px;
+}
+
+.main .tpl_list tr td {
+	padding: 5px 0 5px 5px;
+}
+
+.main .tpl_list .first th {
+	height: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	color:#00C;
+	background: #FFC;
+}
+
+.main .tpl_list .first th.type{
+	width: 10%;
+}
+
+.main .tpl_list .first th.desc{
+	width: 90%;
+}
+
+.main .tpl_list .record .title {
+	font-size: 24px;
+	color: #F00;
+}
+
+.main .tpl_list .all-box a{
+	display: block;
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin: 0 10px 10px 0;
+	line-height: 148px;
+	text-decoration: none;
+}
+
+.main .tpl_list .button a{
+	display: block;
+	width: 150px;
+	height: 50px;
+	float: left;
+	margin: 0 10px 10px 0;
+	line-height: 48px;
+	text-decoration: none;
+}
+
+.main .tpl_list .box a{
+	display: block;
+	width: 255px;
+	height: 198px;
+	float: left;
+	margin: 0 15px 10px 0;
+	line-height: 198px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.main .tpl_list .box img{
+	width:240px;
+	height: 190px;
+}
+
+.main .tpl_list .all-box a img{
+	margin-top: 0;
+	vertical-align: middle;
+}
+
+.main .tpl_list .all-box a:hover {
+	background-color: #CF6;
+}
+
+/* ======================================= DETAIL =============================================== */
+.detail {
+	margin: 20px auto;
+	width: 1000px;
+	padding: 10px;
+}
+
+.detail .title {
+	font: bold 36px Tahoma, Geneva, sans-serif;
+	color: #00F;
+	text-align: center;
+}
+.detail .box {
+	margin-bottom: 20px;
+}
+
+.detail .box .note {
+	font: italic bold 18px/20px Tahoma, Geneva, sans-serif;
+	color: #F00;
+	margin-bottom: 10px;
+}
+
+.detail .box .desc {
+	border: 2px #999999 solid;
+	padding: 10px;	
+}
+
+.detail .box .demo {
+	padding: 10px;
+}
+
+.detail .box .desc .code {
+	margin-bottom: 10px;
+}
+
+.detail .box .desc .code span {
+	font: italic bold 14px "Times New Roman", Times, serif;
+	display: block;
+}
+
+.detail .box .desc .code textarea {
+	width: 99%;
+	height: 80px;
+	resize: none;
+	background-color: #E8E8E8;
+	padding: 2px;
+	border: 1px solid #999;
+}

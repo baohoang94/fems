@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 01</title>
+<script type="text/javascript">
+	
+	// Loại bỏ các khoảng trắng dư thừa trong một chuỗi
+	// Dư thừa bên trái:        Javascript
+	// Dư thừa bên phải:  Javascript            
+	// Dư thừa giữa các từ: Javascript is          easy
+	
+	var enter	=	"<br />";
+	var str 	= "        Javascript is      easy       ";
+	
+	
+	
+	document.write("Input: " + str + " length: " + str.length + enter);
+
+	
+	// Loại bỏ các khoảng trắng dư thừa trong một chuỗi
+	function trim(string){
+		string = string.replace(/^\s+/igm,"");
+		string = string.replace(/\s+$/igm,"");
+		string = string.replace(/\s+/igm," ");
+		return string;
+	}
+	
+	str = trim(str);
+	document.write("Output right: " + str + " - length: " + str.length + enter);
+</script>
+</head>
+
+<body>
+</body>
+</html>

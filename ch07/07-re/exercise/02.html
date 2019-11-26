@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 01</title>
+<script type="text/javascript">
+	
+	var enter = "<br />";
+	
+	String.prototype.splitName = function(){
+		var result = [];
+		var spaceFirst 	= this.indexOf(" ");
+		var spaceEnd 	= this.lastIndexOf(" ");
+		
+		if(spaceFirst > 0 && spaceEnd > 0) {
+			result[0] = this.slice(0,spaceFirst);
+			result[1] = this.slice(spaceFirst + 1,spaceEnd);
+			result[2] = this.slice(spaceEnd + 1);
+		}
+		return result;
+	}
+	
+	// Loại bỏ các khoảng trắng dư thừa trong một chuỗi
+	function trim(string){
+		string = string.replace(/^\s+/igm,"");
+		string = string.replace(/\s+$/igm,"");
+		string = string.replace(/\s+/igm," ");
+		return string;
+	}
+	
+	function splitName(){
+		var xhtml;
+		var fullName = new String();
+		fullNamme = document.getElementById("full-name").value;
+		fullNamme = trim(fullNamme);
+		
+		var result = fullNamme.splitName();
+		if(result.length > 0){
+			xhtml  = "<p>Họ: " + result[0] + "</p>";
+			if(result[1]!="") xhtml += "<p>Họ lót: " + result[1] + "</p>";
+			xhtml += "<p>Tên: " + result[2] + "</p>";
+		}else{
+			xhtml = "Dữ liệu không hợp lệ"
+		}
+		
+		document.getElementById("result").innerHTML = xhtml;
+	}
+</script>
+<style type="text/css">
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.content {
+		width: 400px;
+		height: 200px;
+		margin: 20px auto;
+		border: 2px solid #CCC;
+		text-align: center;
+		padding: 10px;
+	}
+	
+	.content input[type=button]{
+		padding: 2px 5px;
+	}
+	
+	.content #result {
+		text-align: justify;
+		font-weight: bold;
+		margin-top: 20px;
+	}
+</style>
+</head>
+
+<body>
+	<div class="content">
+    	<input type="text" name="full-name" id="full-name" />
+        <input type="button" value="Tách" onclick="splitName();" />
+        <div id="result"></div>
+    </div>
+</body>
+</html>
+
+
+
+

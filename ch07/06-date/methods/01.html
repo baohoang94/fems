@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 01</title>
+<style type="text/css">
+	#result {
+		margin: 20px auto;
+		height: 300px;
+		width: 600px;
+		border: 2px solid #999;
+		padding: 10px;
+	}
+</style>
+<script type="text/javascript">
+
+ 	var d = new Date();
+	var enter = "<br />";
+	var result = "<ul>";
+
+	result += "<li>Năm: " + d.getFullYear() + enter + "</li>";
+	result += "<li>Tháng: " + parseInt(d.getMonth()+1) + enter + "</li>";
+	result += "<li>Ngày trong tháng: " + d.getDate() + enter + "</li>";
+	result += "<li>Ngày trong tuần: " + d.getDay() + enter + "</li>";
+	result += "<li>Giờ: " + d.getHours() + enter + "</li>";
+	result += "<li>Phút: " + d.getMinutes() + enter + "</li>";
+	result += "<li>Giây: " + d.getSeconds() + enter + "</li>";
+	result += "<li>Mili giây: " + d.getMilliseconds() + enter + "</li>";
+	result += "<li>getTime: " + d.getTime() + enter + "</li>";
+	result += "<li>getTimezoneOffset: " + d.getTimezoneOffset() + enter + "</li>";
+	result += "</ul>"
+	
+	function showResult(){
+		document.getElementById("result").innerHTML = result;
+	}
+</script>
+
+</head>
+
+<body>
+	<input type="button" onClick="showResult();" value="Show Result" />
+	<div id="result"></div>
+</body>
+</html>

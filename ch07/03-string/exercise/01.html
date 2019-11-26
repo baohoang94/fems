@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 01</title>
+<script type="text/javascript">
+	
+	var enter = "<br />";
+	
+	String.prototype.splitName = function(){
+		var result;
+		var spaceFirst 	= this.indexOf(" ");
+		var spaceEnd 	= this.lastIndexOf(" ");
+		
+		if(spaceFirst > 0 && spaceEnd > 0) {
+			result  = "Họ: " + this.slice(0,spaceFirst) + enter;
+			result += "Họ lót: " + this.slice(spaceFirst,spaceEnd) + enter;
+			result += "Tên: " + this.slice(spaceEnd) + enter;
+		}else{
+			result = "Dữ liệu không hợp lệ";
+		}
+		
+		return result;
+	}
+
+	
+	function splitName(){
+		var fullName = new String();
+		fullNamme = document.getElementById("full-name").value;
+		
+		document.getElementById("result").innerHTML = fullNamme.splitName();
+	}
+</script>
+<style type="text/css">
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.content {
+		width: 400px;
+		height: 200px;
+		margin: 20px auto;
+		border: 2px solid #CCC;
+		text-align: center;
+		padding: 10px;
+	}
+	
+	.content input[type=button]{
+		padding: 2px 5px;
+	}
+	
+	.content #result {
+		text-align: justify;
+		font-weight: bold;
+		margin-top: 20px;
+	}
+</style>
+</head>
+
+<body>
+	<div class="content">
+    	<input type="text" name="full-name" id="full-name" />
+        <input type="button" value="Tách" onclick="splitName();" />
+        <div id="result"></div>
+    </div>
+</body>
+</html>
+
+
+
+

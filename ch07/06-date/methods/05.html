@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 05</title>
+
+<script type="text/javascript">
+	/*
+		Sử dụng hàm parse để tính toán số năm từ thời điểm truyền vào so với 01/01/1970
+		Chuyển từ milisecond => năm
+		
+		1 năm 	= 365 ngày
+		1 ngày 	= 24 giờ
+		1 giờ 	= 60 phút
+		1 phút	= 60 giây
+		1 giây	= 1000 miligiay
+		=> 1 năm = 365*24*60*60*1000
+	*/
+	
+	var enter = "<br />";
+	var distance = Date.parse("March 14, 2013");
+	var yearMili = 365*24*60*60*1000;
+	
+	document.write("Số năm: " + Math.round((distance/yearMili)) + enter);
+
+</script>
+
+</head>
+
+<body>
+</body>
+</html>

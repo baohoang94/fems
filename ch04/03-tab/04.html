@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Tab 04</title>
+<style type="text/css">
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.clr {
+		clear: both;
+	}
+	
+	.right {
+		border: 2px solid #999;
+		padding: 20px;
+		width: 600px;
+		margin: 30px auto; 
+	}
+	
+	#tab-D .tab-box {
+		border: 1px solid #999;
+		margin-top: -1px;
+	}
+	
+	#tab-D .tab-box > a {
+		display: block;
+		background: url(images/tabD/arrow-right.png) 5px center no-repeat;
+		padding: 5px 5px 5px 30px;
+		font-weight: bold;
+		text-decoration: none;
+		color: #000;
+	}
+	
+	#tab-D .tab-box > a:hover, #tab-D .current > a  {
+		background: url(images/tabD/arrow-down.png) 5px center no-repeat;
+		color: #00F;
+	}
+	
+	#tab-D .tab-box > div {
+		display: none;
+	}
+	
+	
+	#tab-D .current > div {
+		display: block;
+		padding: 10px;
+		text-align: justify;
+		border-top: 1px solid #999;
+	}
+</style>
+</head>
+
+<body>
+	<div class="right">
+    	<div id="tab-D">
+        	<div class="tab-box">
+            	<a href="#">PHP Script</a>
+                <div>PHP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            </div>
+            <div class="tab-box ">
+            	<a href="#">ASP Script</a>
+                <div>ASP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            </div>
+            <div class="tab-box current">
+            	<a href="#">JSP Script</a>
+                <div>JSP script. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

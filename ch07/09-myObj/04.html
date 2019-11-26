@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 04</title>
+<script type="text/javascript">
+
+	var enter = "<br />";
+	// Cách 02
+	this.myValidate2 = function(){
+		
+		// Thuộc tính
+		this.data	=	"This is a test";		// Public
+		this.msg	=	"This is a test 2";		// Public
+		var private	= 	"Private text";			// Private
+		
+		// Phương thức
+		this.getData	= getData;
+		this.getMsg		= getMsg;
+		this.getPrivate	= getPrivate;
+		
+		
+		// Xây dựng phương thức
+		function getData(){
+			return this.data;
+		}
+		
+		function getMsg(){
+			return this.msg;
+		}
+		
+		function getPrivate(){
+			return private;
+		}
+	}
+	
+	
+	var myObj = new myValidate2();
+	
+	document.write("Properties - private: " + myObj.private + enter);	
+	document.write("Methods - getPrivate: " + myObj.getPrivate() + enter);
+</script>
+</head>
+
+<body>
+</body>
+</html>
