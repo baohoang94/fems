@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mouse Events</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.10.0.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*$("#boxA > *").bind("click",{cls: "bg01"},function(e){
+			$(this).toggleClass(e.data.cls);
+		});*/
+		
+		/*$("#boxA").delegate("*","click",{cls: "bg01"},function(e){
+			$(this).toggleClass(e.data.cls);	
+		});*/
+		
+		$("#boxA").delegate("span, p","click",{cls: "bg01"},function(e){
+			$(this).toggleClass(e.data.cls);	
+		});
+		
+		//=========================================
+		/*$("#boxA > *").bind({
+			click: function(e){
+					$(this).toggleClass("bg02");
+				},
+			mouseenter: function(e){
+					$(this).addClass("bg01");
+				},
+			mouseleave: function(e){
+					$(this).removeClass("bg01");
+				}
+		});*/
+		
+		/*$("#boxA").delegate('*',{
+			click: function(e){
+					$(this).toggleClass("bg02");
+				},
+			mouseenter: function(e){
+					$(this).addClass("bg01");
+				},
+			mouseleave: function(e){
+					$(this).removeClass("bg01");
+				}
+		});*/
+		
+	});
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>
+          .delegate( selector, eventType, handler(eventObject) ) |  
+          .delegate( selector, eventType, eventData, handler(eventObject) ) | 
+          .delegate( selector, events )
+       </h1>
+    </center>
+    
+    <div id="info" class="info">Ready...</div>
+    
+    <div id="boxA" class="boxA">
+    	<span class="item">1. HTML</span>
+        <div class="item">2. CSS</div>
+        <p class="item">3. JS</p>
+        <div class="item">4. jQuery</div>
+    </div>
+   	
+    
+</body>
+
+</html>

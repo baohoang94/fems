@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form elements</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.10.0.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+		$("#process").click(function(e) {
+         	//console.log($("form[name='appForm']"));
+			console.log($("#appForm :input[name='username']"));
+			//$("#appForm :input[name='username']").addClass("bg02");
+			console.log($("#appForm [name='username']"));
+			$("#appForm [name='username']").addClass("bg02");
+        });
+	});
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>Form elements</h1>
+    </center>
+    
+    <form name="appForm" id="appForm" method="" enctype="multipart/form-data" class="boxA">
+    	<div>
+        	Textbox:
+        	<input type="text" name="username" class="input" value="KhanhPham"/>
+        </div>
+        <div>
+        	Password:
+        	<input type="password" name="password" class="input" value="123456"/>
+        </div>
+    	
+    </form>
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+</body>
+
+</html>

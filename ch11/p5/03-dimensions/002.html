@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Attributes</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.10.0.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$("#process").click(function(e) {
+			var txt = '';
+			txt = 'Width: ' + $("#boxA").width() + " | ";
+			txt += 'innerWidth: ' + $("#boxA").innerWidth() + " | ";
+			txt += 'outerWidth: ' + $("#boxA").outerWidth() + " | ";
+			txt += 'outerWidth (true): ' + $("#boxA").outerWidth(true) + " | ";
+			$("#info").html(txt);
+		});
+	});
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>
+        	.width() | .innerWidth() | .outerWidth([includeMargin])
+       </h1>
+    </center>
+    
+    <div class="boxA">
+    	height: Chiều cao (Không bao gồm: padding + border + margin) 
+        <br />
+        innerHeight: Chiều cao + padding (Không bao gồm: border + margin) 
+        <br />
+        outerHeight: Chiều cao + padding + border (Không bao gồm: margin)
+    </div>
+    
+    <div id="info" class="boxA"></div>
+    
+    <div id="boxA" class="box"></div>
+            
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+</body>
+
+</html>

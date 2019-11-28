@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Selectors - Basic</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.10.0.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(e) {
+    	$("#process").click(function(){ 
+			//TH 1
+			//$("#boxA").addClass("bg02");
+			
+			//TH 2
+			//$("#boxA .text2").addClass("bg02");	
+			
+			//TH 3
+			//$("#boxA .text2.bg01").addClass("bg02");
+			
+			//TH 4
+			//$("#boxA p, #boxB p").addClass("bg02");	
+			
+			//TH 5
+			//$("#boxA p.text2, #boxB p.text2").addClass("bg02");	
+			
+			//TH 6
+			$("#boxA #html.item").addClass("bg02");	
+			
+		}); 
+    });
+	
+</script>
+</head>
+
+<body>
+	<h1 style="text-align:center; padding: 5px;">jQuery("tag")</h1>
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+    <div id="boxA" class="boxA">
+    	<div class="item" id="html">1. HTML</div>
+        <p class="item text2">2. CSS</p>
+        <div class="item"><strong>3. JS</strong></div>
+        <span class="item bg01 text2">4. jQuery</span>
+    </div>
+    
+    <div id="boxB" class="boxA">
+    	<div class="item">1. PHP</div>
+        <p class="item">2. ASP</p>
+        <div class="item">3. JSP</div>
+        <span class="item text2 bg01" >4. Perl</span>
+        <span class="item text3">5. ASPX</span>
+    </div>
+    
+</body>
+</html>

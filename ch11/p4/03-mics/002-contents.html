@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Traversing - Miscellaneous</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.10.0.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$("#process").click(function(e) {
+			
+			
+			var tmp = $("#boxA").contents();
+			console.log(tmp);
+			
+		});
+	});
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>.contents()</h1>
+    </center>
+    
+    <div id="boxA" class="boxA">
+    	<p class="item tmp1">1. HTML</p>
+        <p class="item tmp2">2. CSS</p>
+        <p class="item tmp3">3. JavaScript</p>
+        <p class="item">4. jQuery</p>    
+        <p class="item">5. PHP</p> 
+        <p class="item">6. ASP</p> 
+        <p class="item">7. JSP</p>    
+    </div>
+            
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+</body>
+
+</html>

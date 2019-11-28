@@ -1,0 +1,16 @@
+@import "../../less/bootstrap.less";
+
+div.row > div {
+	
+}
+
+div.my-row {
+	padding: 20px;
+	margin: 10px auto;
+	border: 2px solid #ebe9f9;
+}
+
+div.my-row > img{
+	max-width: 100px;
+	max-height: 100px;
+}

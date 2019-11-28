@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$.each(arr,function(index, value)</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.10.0.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+		$("#process").click(function(e) {
+						
+			$(".boxA div:only-of-type").addClass("bg02");
+        });
+	});
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>jQuery( ":only-of-type" )</h1>
+    </center>
+        
+    <div id="boxA" class="boxA">
+    	<p class="item">1. HTML</p>
+        <p class="item">2. CSS</p>
+        <p class="item">3. JavaScript</p>
+        <p class="item">4. jQuery</p>       
+    </div>
+    
+    <div id="boxB" class="boxA">
+    	<div class="item">1. PHP</div> 
+        <p class="item">2. ASP</p> 
+        <p class="item">3. JSP</p>    
+        <p class="item">4. Perl</p>  
+        <p class="item">5. ASPX</p>
+    </div>
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+</body>
+
+</html>

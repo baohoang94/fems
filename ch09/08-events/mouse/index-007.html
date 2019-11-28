@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/mySupport.js"></script>
+<script type="text/javascript">
+	
+	//window.onclick = function(){
+	//onclick = onmousedown & onmouseup
+	document.onmousedown = function(){	
+		var e = event || window.event;
+		console.log(typeof(e.which));
+		
+		var t = "";
+		var boxA = document.getElementById("boxA");
+		boxA.innerHTML = t;
+		disableRightClick(e);
+		
+	}
+	
+	function disableRightClick(e){
+		var myS = new mySupport();
+		var vType = myS.mouseButton(e);
+		//
+		if(vType == "right"){
+			alert("Right click disabled");
+			return false;	
+		}
+	}
+	
+
+</script>
+</head>
+
+<body>
+	<h1 style="text-align: center;">Events</h1>
+    <div id="boxA" class="boxA">
+    	Event is not difficult
+    </div>
+
+</body>
+</html>

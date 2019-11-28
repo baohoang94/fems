@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap 101 Template</title>
+	<link href="../../css/bootstrap.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+</head>
+<body>
+	<!--
+		Offsetting columns: Định dạng cho màn hình Medium device 
+ 		01. Tạo 2 cột left và right với left có class col-md-3, right có class col-md-7. Left và right cách nhau khoảng cách là col-md-2
+ 		02. Tạo cột main có class col-md-6, cách bìa trái col-md-3 và bìa phải col-md-3
+ 		03. Canh giữa
+	-->
+	<div class="container">
+		<div class="row my-row">
+			<div class="col-md-3">Left</div>
+			<div class="col-md-7 col-md-offset-2">Right</div>
+		</div>
+		
+		<div class="row my-row">
+			<div class="col-md-3 col-md-offset-2">Left</div>
+		</div>
+		
+		<div class="row my-row">
+			<div class="col-md-6 col-md-offset-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia nobis.</div>
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,26 @@
+.container-fluid {
+	background-color: #e8e8e8;
+	min-height: 500px;
+	color:  #888;
+	padding: 20px 15px;
+}
+
+#house-list .house {
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid #ededed;
+	margin-bottom: 20px;
+}
+
+@media screen and (min-width: 990px){
+	#house-list .house img {
+		max-width: 180px;
+	}
+}
+
+@media screen and (max-width: 990px){
+	#house-list .house .media-body {
+		clear: both;
+		padding: 10px;
+	}
+}

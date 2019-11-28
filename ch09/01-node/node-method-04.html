@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/functions.js"></script>
+<link rel="stylesheet" type="text/css" href="css/01.css" />
+<title>Untitled Document</title>
+<style type="text/css">
+.boxA{
+	height: 120px;
+}
+
+.boxA > div{
+	border: solid 1px #ccc;
+	padding: 3px;
+	margin-bottom: 3px;
+}
+</style>
+<script type="text/javascript">
+	
+	function removeNode(){
+		var boxA = document.getElementById("boxA");
+		var firstNode = boxA.firstChild;
+		if(firstNode.nodeName == "#text"){
+			firstNode = firstNode.nextSibling;
+		}
+		boxA.removeChild(firstNode);
+		
+		
+	}
+</script>
+</head>
+
+<body>  
+	<input id="copy" type="button" onclick="removeNode();" value="Submit"/>
+    <div id="boxA" class="boxA" >
+    	<div>Home</div>
+        <div>About</div>
+        <div>Product</div>
+    </div>
+    
+	<div id="boxB" class="boxA" ></div>
+   
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+body {
+	background-color: #ee7778;
+}
+
+.row {
+	background-color: #ededed;
+	padding: 20px 50px;
+	margin: 100px;
+}
+
+.page-header {
+    margin: 20px 0;
+    padding-bottom: 9px;
+    text-align: center;
+}
+
+.form-control {
+    border: 1px solid #D6D6D6;
+    border-radius: 0;
+    box-shadow: none;
+}

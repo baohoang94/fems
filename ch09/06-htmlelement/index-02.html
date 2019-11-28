@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript">
+	
+	function process(){
+		var boxA = document.getElementById("boxA");
+		var info = document.getElementById("info");
+		var txt;
+		
+		txt = "offsetHeight: " + boxA.offsetHeight
+				+ "<br>offsetLeft: " + boxA.offsetLeft
+				+ "<br>offsetParent: " + boxA.offsetParent
+				+ "<br>offsetTop: " + boxA.offsetTop				
+				+ "<br>offsetWidth: " + boxA.offsetWidth
+				+ "<br>scrollHeight: " + boxA.scrollHeight
+				+ "<br>scrollWidth: " + boxA.scrollWidth
+				+ "<br>scrollTop: " + boxA.scrollTop
+				+ "<br>scrollLeft: " + boxA.scrollLeft
+				;
+		info.innerHTML = txt;
+		
+		/*number	offsetHeight 
+		number	offsetLeft 
+		number	offsetParent 
+		number	offsetTop 
+		number	offsetWidth */
+		
+	}
+	
+</script>
+<style>
+
+</style>
+</head>
+
+<body>
+	<h1>HTMLElement</h1>
+    
+    <div id="info" class="boxA"></div>
+    
+    <div id="boxA" class="boxA" style="color:#060; height: 150px; overflow: auto;" title="This is a text">
+    	<div dir="rtl">1. HTML</div>
+        <div dir="ltr">2. CSS</div>
+        <div>3. JS</div>
+        <div>4. JQUERY</div>
+        <div>5. JQUERY</div>
+        <div>6. JQUERY</div>
+        <div>7. JQUERY</div>
+    </div>
+    
+    <input type="button" value="process" id="process" class="button" onclick="process();"/>
+    
+    
+</body>
+</html>

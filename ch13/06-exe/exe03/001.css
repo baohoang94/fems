@@ -1,0 +1,46 @@
+body {
+	background-color: #eaeaea;
+}
+
+.user-details {
+	margin-top: 100px;
+	position: relative;
+	background-color: #fff;
+	min-height: 100px;
+}
+
+.user-details .user-image {
+	position: absolute;
+	left: 0;
+	top: -50px;
+	text-align: center;
+	width: 100%;
+}
+
+.user-details .user-info-block {
+	position: absolute;
+	left: 0;
+	top: 50px;
+	text-align: center;
+	width: 100%;
+	background-color: #fff;
+}
+
+.user-details .user-info-block .navigation {
+	border: 1px solid #428BCA;
+	border-width: 1px 0px;
+}
+
+.user-details .user-info-block .navigation li {
+	float: left;
+	
+}
+
+.user-details .user-info-block .navigation li a{
+	padding: 20px 30px;
+}
+
+.user-details .user-info-block .navigation li.active a{
+	background: #428BCA;
+	color: #fff;
+}

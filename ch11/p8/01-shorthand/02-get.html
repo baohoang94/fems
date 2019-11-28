@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Effects - Sliding</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.10.0.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		//Load dữ liệu từ server về và tr
+		$("#process").click(function(e) {
+			//=======$.get(url,success())================
+			var url,data2;
+			
+			/*url = "files/file-002.php?t=" + Math.random() + "&id=10&name=Apple";
+			$.get(url,function(data,status,jqXHR){
+				console.log($.type(data));
+				$("#info").html(data);
+				console.log(status);
+				console.log(jqXHR);
+			});*/
+			
+			//=======$.get(url,data,success())================
+			/*url 	= "files/file-002.php?t=" + Math.random();
+			data2 	= {"id": 10, "name": "Apple"};
+			$.get(url,data2,function(data,status,jqXHR){
+				$("#info").html(data);
+			});*/
+			
+			//=======$.get(url,data,success(),dataType): xml, json, script, html  ========
+			/*url = "files/books.xml";
+			$.get(url,function(data){
+					console.log(data);
+					//console.log($(data).find("title"));
+					var txt = '';
+					$(data).find("title").each(function(i, val) {
+                        //console.log(i);
+						//console.log(val);
+						console.log($(val).text());
+						
+						txt += $(this).text() + "<br/>";
+                    });
+					
+					$("#info").html(txt);
+				 });*/
+				 
+			//=========json==============
+			/*url = "files/file-002a.php";
+			$.get(url,function(data){
+				console.log(data);
+				console.log($.parseJSON(data));	
+				var txt = '';
+				$.each($.parseJSON(data),function(i,val){
+					txt += i + ": " + val + "<br/>";
+						
+				});
+				
+				$("#info").html(txt);
+			});*/
+			
+			//=========script==============
+			url = "files/test.js";
+			$.get(url,function(data){
+				console.log(data);
+				hello();
+			});
+			
+        });
+		
+	});
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>
+          jQuery.get(url[,data][,success(data,textStatus,jqXHR)][,dataType])
+       </h1>
+    </center>
+    
+    <div id="info" class="info">Ready...</div>
+   
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+</body>
+
+</html>

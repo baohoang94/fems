@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Attributes</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.10.0.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		//Ẩn đi đối tượng chúng ta đã xác định
+		$("#process").click(function(e) {
+			
+			//================.hide()===============
+			//$("#box").hide();
+			//$("div").hide();
+			
+			//===========.hide([duration][,complete])===========
+			//$("#box").hide(1000);//default (400) - fast - slow - n
+			/*$("#box").hide("slow",function(){
+				$("#info").text("Box đã ẩn");
+			});*/
+			
+			//===========.hide(options)===========
+			$("#box").hide({
+				duration: "slow",
+				easing: "linear", //swing - linear (animate)
+				complete: function(){
+							$("#info").text("Box đã ẩn");	
+						 }
+			
+			});
+		});
+		
+	});
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>
+        	.hide() | .hide([duration][,complete]) | .hide(options) | .hide([duration][,easing][,complete])
+       </h1>
+    </center>
+    
+    <div id="info" class="info"></div>
+    
+    <div id="boxA" class="boxA">
+       <div id="box" class="box">My box</div>
+    </div>  
+    
+    
+    
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+    
+</body>
+
+</html>

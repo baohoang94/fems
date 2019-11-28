@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 06</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+	
+	var newWin1;
+	var newWin2;
+	function callOpen1(){
+		newWin1 = window.open("","","width=200, height=250, top= 200, left=400");
+		newWin1.document.write("New window 1");
+	}
+	
+	function callOpen2(){
+		var newWin2 = window.open("","","width=250, height=300, top= 300, left=600");
+		newWin2.document.write("New window 2");
+		newWin1.focus();
+		newWin1.blur();
+		newWin2.focus();
+	}
+	
+</script>
+</head>
+<body>
+	<input type="button" value="Open Window 1" onclick="callOpen1();">
+	<input type="button" value="Open Window 2" onclick="callOpen2();">
+</body>
+</html> 

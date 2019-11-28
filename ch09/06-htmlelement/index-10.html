@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/myCssElement2.js"></script>
+
+<script type="text/javascript">
+//	attachEvent
+	window.onload = function(){
+		/*========================================
+		*	btnProcess
+		*========================================*/
+		var btnProcess = document.getElementById("process");	
+		
+		if(typeof(btnProcess.addEventListener)== 'function'){
+			btnProcess.addEventListener("click",process,false);
+		}else{
+			btnProcess.attachEvent("onclick",process);
+		}
+		
+		/*========================================
+		*	btnReset
+		*========================================*/
+		var btnReset = document.getElementById("reset");
+		
+		if(typeof(btnReset.addEventListener)== 'function'){
+			btnReset.addEventListener("click",resetBgColor,false);
+		}else{
+			btnReset.attachEvent("onclick",resetBgColor);
+		}
+		
+		/*========================================
+		*	btnReset
+		*========================================*/
+		var btnRemove = document.getElementById("remove");
+		//deattachEvent - removeEventListener
+		
+		if(typeof(btnRemove.addEventListener)== 'function'){
+			btnRemove.addEventListener("click",removeEvent,false);
+		}else{
+			btnRemove.attachEvent("onclick",removeEvent);
+		}
+		
+		
+			
+	}
+	
+	function removeEvent(){
+		//detachEvent - removeEventListener
+		var btnProcess = document.getElementById("process");
+		//console.log(typeof(btnProcess.detachEvent));
+		//console.log(typeof(btnProcess.removeEventListener));
+		
+		if(typeof(btnProcess.removeEventListener) == "function"){
+			btnProcess.removeEventListener("click",process,false);
+		}else{			
+			btnProcess.detachEvent("onclick",process);
+		}
+	}
+	
+	function process(){	
+		
+		var boxA = document.getElementById("boxA");
+		var elemts = boxA.children;
+		for(var i=0; i< elemts.length; i++){
+			var objHTML = elemts[i];
+			console.log(objHTML);
+			if(i%2 == 0){
+				objHTML.style.backgroundColor = "#FCF";
+			}else{
+				objHTML.style.backgroundColor = "#CFC";
+			}
+		}
+	}
+	
+	function resetBgColor(){
+		var boxA = document.getElementById("boxA");
+		var elemts = boxA.children;
+		for(var i=0; i< elemts.length; i++){
+			var objHTML = elemts[i];
+			if(typeof(objHTML.style.removeProperty) == "function"){
+				objHTML.style.removeProperty("background-color");
+			}else{
+				objHTML.style.removeAttribute("background-color");
+			}
+		}
+	}
+
+</script>
+<style>
+
+</style>
+</head>
+
+<body>
+	<h1>HTMLElement</h1>
+   
+    <div id="boxA" class="boxA">
+    	<div>1. HTML</div>
+        <div>2. CSS</div>
+        <div>3. JS</div>
+        <div>4. JQUERY</div>
+        <div>5. JQUERY</div>
+        <div>6. JQUERY</div>
+        <div>7. JQUERY</div>
+    </div>
+    <center>
+    	<input type="button" value="Process" id="process" class="button" />
+        <input type="button" value="Reset" id="reset" class="button" />
+        <input type="button" value="Remove event" id="remove" class="button" />
+    </center>
+    
+</body>
+</html>

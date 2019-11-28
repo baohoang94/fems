@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 02</title>
+<style type="text/css">
+
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.content{
+		width: 2400px;
+		margin: 10px auto;
+	}
+	
+	.content .box{
+		width: 400px;
+		background: #0F9;
+		line-height: 200px;
+		text-align: center;
+		margin: 0px 10px 10px 0px;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+	}
+	
+	.content .box a{
+		font-size: 20px;
+		text-decoration: none;
+	}
+	
+</style>
+</head>
+
+<script type="text/javascript">
+	
+	function getXOffset(){
+		var xOffset = (typeof(window.pageXOffset)!="number") ? document.documentElement.scrollLeft
+															 : window.pageXOffset;
+		return xOffset;
+	}
+	
+	function getYOffset(){
+		var yOffset = (typeof(window.pageYOffset)!="number") ? document.documentElement.scrollTop
+															 : window.pageYOffset;
+		return yOffset;
+	}
+	
+	function callScrollBy(){
+		window.scrollBy(200,0);
+		
+		//alert(window.pageYOffset);
+		alert(getXOffset());
+	}
+	
+	
+</script> 
+
+<body>
+	<div class="content">
+    	<div class="box">
+        	<a href="javascript:callScrollBy();">Scroll (Position 1)</a>
+        </div>
+        <div class="box">
+        	<a href="javascript:callScrollBy();">Scroll (Position 2)</a>
+        </div>
+        <div class="box">
+        	<a href="javascript:callScrollBy();">Scroll (Position 3)</a>
+        </div>
+        <div class="box">
+        	<a href="javascript:callScrollBy();">Scroll (Position 4)</a>
+        </div>
+        <div class="box">
+        	<a href="javascript:callScrollBy();">Scroll (Position 5)</a>
+        </div>
+    </div>
+</body>
+</html>

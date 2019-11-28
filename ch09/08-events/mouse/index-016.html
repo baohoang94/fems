@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/style-016.css"/>
+<script type="text/javascript" src="js/myCssElement.js"></script>
+<script type="text/javascript" src="js/move.js"></script>
+
+<script type="text/javascript">
+	window.onload = function(){
+		document.onclick = function(){
+			var e = event || window.event;
+			var target = e.target != null? e.target:e.srcElement; 
+			if(target.parentNode.id == "boxA"){
+				moveIt(target);
+			}
+		}
+	}
+	
+	function moveIt(objHTML){
+		console.log(objHTML.offsetWidth);
+		var cssTarget 		= new myCssElement(objHTML);
+		var offsetTarget 	= cssTarget.getOffset(objHTML);
+		objHTML.style.width = objHTML.offsetWidth + "px";
+		objHTML.style.backgroundColor = "#FFC";
+		document.body.appendChild(objHTML);
+		
+		var boxB 		= document.getElementById("boxB");
+		var cssBoxB 	= new myCssElement(boxB);
+		var offsetBoxB 	= cssBoxB.getOffset(boxB);
+		var xB = offsetBoxB.left 
+				 + parseInt(cssBoxB.cssStyle().paddingLeft)
+				 + parseInt(cssBoxB.cssStyle().borderLeftWidth);
+		
+		var yB = offsetBoxB.top 
+				 + parseInt(cssBoxB.cssStyle().paddingTop)
+				 + parseInt(cssBoxB.cssStyle().borderTopWidth);
+				 
+		console.log(offsetTarget);
+		console.log(offsetBoxB);
+		console.log(xB + " | " + yB);
+		var positionObj = {xA: offsetTarget.left,
+						   yA: offsetTarget.top, 
+						   xB: xB, 
+						   yB: yB}
+		console.log(positionObj);						   
+		var mObj = new moveElement(positionObj);
+		mObj.setSpeed(10);
+		mObj.run(objHTML);
+		console.log(mObj.getDirection());
+	}
+	
+</script>
+</head>
+
+<body>
+	<h1 style="text-align: center;">Events</h1>
+    
+    <div id="boxA" class="boxA left" style="position: static;">
+    	<div class="item"> 1. HTML</div>
+        <div class="item"> 2. CSS</div>
+        <div class="item"> 3. Javascript</div>
+        <div class="item"> 4. PHP</div>
+        <div class="item"> 5. MySQL</div>
+    </div>
+    
+     <div id="boxB" class="boxA left"></div>
+     
+	<div class="clr"></div>
+</body>
+</html>

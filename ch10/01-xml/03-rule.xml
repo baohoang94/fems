@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+<book>
+	<title>Lập trình jQuey</title>
+	<author>ZendVN Group</author>
+	<pages>500</pages>
+	<weight units="gam">400</weight>
+	<img file="jquery.png" />
+</book>
+-->
+<!--
+<book>
+	<title>Lập trình jQuey</title>
+	<author>ZendVN Group</author>
+	<pages>500</pages>
+	<weight units="gam">400</weight>
+	<img file="jquery.png" />
+</book>
+-->
+<!-- 
+	& < > " ' 
+	& = &amp;
+	< = &lt;
+	> = &gt;
+	" = &quot;
+	' = &apos;
+
+-->
+<book>
+	<title>Lập trình jQuey &amp; Zend Framework</title>
+	<author>ZendVN Group</author>
+	<pages>500</pages>
+	<weight units="gam">400</weight>
+	<img file="jquery.png" />
+</book>

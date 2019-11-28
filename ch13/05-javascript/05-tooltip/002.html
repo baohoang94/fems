@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap 3 - Button</title>
+	<link href="style.css" rel="stylesheet/less" type="text/css">
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/less-1.7.0.min.js"></script>
+	<script type="text/javascript">
+	
+		$(document).ready(function() {
+			$('.my-tooltip').tooltip({ 
+			//	html 		: true,						// Hiển thị theo dạng HTML	
+				animation 	: true,						// Hiệu ứng khi hiển thị tooltip 	
+			//	placement 	: 'right',					// top | bottom | left | right | auto
+				delay 		: { show: 1000, hide: 0 }
+			});
+		});
+	</script>
+</head>
+
+<body >
+	<div class="container">
+		<div class="row my-row">
+			<a class="my-tooltip" href="#" 
+				data-toggle="tooltip" title="<h1>big tooltip</h1>"
+				data-html="true", data-placement="bottom"
+			>
+				Hover over me
+			</a>
+		</div>
+	</div>
+</body>
+</html>

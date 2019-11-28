@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Attributes</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.10.0.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$("#process").click(function(e) {
+			
+			/*var txt1 = $("[name='txt1']");
+			console.log("Attr: " + $(txt1).attr("disabled"));
+			console.log("Prop: " + $(txt1).prop("disabled"));*/
+			
+			/*var txt2 = $("[name='txt2']");
+			console.log("Attr: " + $(txt2).attr("disabled"));
+			console.log("Prop: " + $(txt2).prop("disabled"));*/
+			
+			/*var cb1 = $("[name='cb1']");
+			console.log("Attr: " + $(cb1).attr("checked"));
+			console.log("Prop: " + $(cb1).prop("checked"));*/
+			
+			var cb2 = $("[name='cb2']");
+			console.log("Attr: " + $(cb2).attr("checked"));
+			console.log("Prop: " + $(cb2).prop("checked"));
+			
+		});
+	});
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>
+        	.removeProp(attributeName) 
+       </h1>
+    </center>
+    
+    <div id="boxA" class="boxA" title="jQuery course" style="font-size: 18px;">
+    	Textbox 1: <input type="text" name="txt1" disabled="disabled" class="input"/>
+        <br />
+        Textbox 2: <input type="text" name="txt2" class="input" />
+        <br />
+        Checkbox 1: <input type="checkbox" name="cb1" checked="checked" class="input"/>
+        <br />
+        Checkbox 2: <input type="checkbox" name="cb2" class="input" />
+        
+    </div>
+   
+            
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+</body>
+
+</html>

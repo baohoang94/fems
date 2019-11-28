@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 03</title>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+	
+	/*	URL: giá trị mặc định about:blank
+		name:
+			_blank:		URL được mở ở một cửa số mới
+			_parent:  	URL được mở ở tại cửa sổ hiện tại
+			_self: 		URL được mở ở tại cửa sổ hiện tại
+			_top: 		URL được mở ở tại cửa sổ hiện tại
+			name:		Thiết lập tên của cửa sổ
+		specs:
+			width=400,height=500
+			left=100,top=100
+			resizable=no
+			scrollbars=no
+			? Làm sao cho cửa sổ mới nằm ở giữa
+		replace
+			true		thay thế tài liệu hiện tại trong danh sách lịch sử
+			false		không thay thế tài liệu hiện tại trong danh sách lịch sử và tạo ra một tài liệu mới
+	*/
+	var newWin = "";
+
+	function callOpen(){
+		newWin = window.open("", "", "width=400,height=500");
+		newWin.document.write("Name of window: " + newWin.name);
+	}
+	
+	function callClose(){
+		if(newWin != ""){
+			if(newWin.closed == true){
+				alert("Cửa sổ đã đóng");
+			}else{
+				newWin.close();
+			}
+		}else{
+			alert("Cửa sổ chưa mở");
+		}
+		
+	}
+	
+</script>
+</head>
+<body>
+	<input type="button" value="Open Window" onclick="callOpen();">
+	<input type="button" value="Close" onclick="callClose();">
+</body>
+</html> 

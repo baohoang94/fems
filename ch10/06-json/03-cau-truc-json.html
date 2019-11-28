@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript">
+	/*
+	<book id="11" type="small">
+	  <title>Lập trình jQuery</title>
+	  <author>KhanhPham và ZendVN group</author>
+	  <pages>500</pages>
+	  <weight units="gam">400</weight>
+	  <price>
+	  		<real>35.50</real>
+			<saleoff>35.50</saleoff>
+	  </price>
+	  <shipping>
+		  	<US>1.3</US>
+			<EU>2.3</EU>
+			<VN>5.6</VN>
+	  </shipping>
+	  
+	</book>
+	
+	*/
+	
+	var book;
+	book = {
+			data: {
+					title: "Lập trình jQuery",
+					author: "KhanhPham và ZendVN group",
+					pages: 500,
+					weight: {
+							 data: 400,
+							 attributes: {units: "gam"}
+							},
+					price: {
+							 real: 35.50,
+							 saleoff: 35.50
+							},
+					shipping: {
+								us: 1.3,
+								eu: 2.3,
+								vn: 5.6
+							}
+				},
+			attributes: { 
+							id: 11,
+							type: "small"
+						}					
+			};
+	window.onload = function(){
+		var btnProcess = document.getElementById("process");
+		
+		btnProcess.onclick = function(){
+			console.log(book.attributes.id);
+			console.log(book.attributes.type);
+			console.log(book.data.weight.data);
+			console.log(book.data.weight.attributes.units);
+		}
+	}
+		
+</script>
+
+</head>
+
+<body>
+	<center style="padding: 20px;">
+    	<input type="button" id="process" value="process" class="button" />
+    </center>
+</body>
+</html>

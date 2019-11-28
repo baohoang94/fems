@@ -1,0 +1,26 @@
+/* CSS Document */
+*{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+.boxA{
+	width: 500px;
+	padding: 10px;
+	margin: 20px auto;
+	border: solid 3px #F00;	
+}
+
+.boxA2{
+	width: 70px;
+	height: 70px;
+	border: solid 2px #000;
+	background-color: #FFC;	
+}
+
+.button{
+	font-size: 12px;
+	padding: 3px;
+	border: solid 1px #333;	
+}

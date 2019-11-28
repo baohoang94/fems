@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+<script type="text/javascript">
+	
+	function process(){
+		var boxA = document.getElementById("boxA");
+		var info = document.getElementById("info");
+		var txt;
+		
+		txt = "childNodes: " + boxA.childNodes
+				+ "<br>children: " + boxA.children
+				+ "<br>className: " + boxA.className
+				+ "<br>dir: " + boxA.firstChild.nextSibling.dir
+				+ "<br>document: " + document
+				+ "<br>id: " + boxA.id
+				//+ boxA.innerHTML
+				//+ boxA.innerText
+				+ "<br>style :" + boxA.style .cssText
+				+ "<br>title :" + boxA.title
+				;
+		info.innerHTML = txt;
+		console.log(boxA.innerText);
+		//console.log(boxA.innerHTML);
+		//info.style.filter = "alpha(opacity=40)"; //IE
+		//info.style.opacity = "0.4";//Chrome
+		
+	}
+	
+</script>
+
+</head>
+
+<body>
+	<h1>HTMLElement</h1>
+    
+    <div id="info" class="boxA"></div>
+    
+    <div id="boxA" class="boxA" style="color:#060;" title="This is a text">
+    	<div dir="rtl">1. HTML</div>
+        <div dir="ltr">2. CSS</div>
+        <div>3. JS</div>
+        <div>4. JQUERY</div>
+    </div>
+    
+    <input type="button" value="process" id="process" class="button" onclick="process();"/>
+    
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Object Document</title>
+<link rel="stylesheet" type="text/css" href="css/style-04.css"/>
+<script type="text/javascript">
+	window.onload = function(){
+		showInfo();
+		var boxA = document.getElementById("boxA");
+		boxA.onscroll = showInfo;
+	}
+	
+	function showInfo(){
+		var boxA = document.getElementById("boxA");
+		var info = document.getElementById("info");
+		info.innerHTML = "boxA width: " + boxA.clientWidth + "<br />"
+						+ "boxA heigth: " + boxA.clientHeight + "<br />"
+						+ "<hr />"
+						+ "Scroll width: " + boxA.scrollWidth + "<br />"
+						+ "Scroll heigth: " + boxA.scrollHeight + "<br />"
+						+ "<hr />"
+						+ "current width: " + boxA.scrollLeft + "<br />"
+						+ "current heigth: " + boxA.scrollTop + "<br />"
+						;
+		
+	}
+	
+</script>
+</head>
+
+<body >
+	<h1>Object event</h1>
+    <h3>onload - onunload - onresize - onscroll</h3>
+    <div class="boxA" id="boxA">
+    	This is a top 
+        <br />
+    	<div class="content"></div>
+        This is a bottom
+    </div>
+    
+    <div id="info" class="boxA"></div>
+    
+</body>
+</html>

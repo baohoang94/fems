@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Effects - Sliding</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery-1.10.0.min.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){		
+		//Ma hoa mot tap hop cac phan tu cua form thanh mot chuoi cho viec submit
+		$("#process").click(function(e) {
+			var val;
+			val  = $("#appForm").serialize();
+			console.log(val);
+			
+			val2  = $("#appForm").serializeArray();
+			console.log(val2);
+			
+			var picture = $("#appForm :file[name='picture']").val();
+			console.log(picture);
+			var fileName = picture.match(/[^\/\\]+$/i);
+			console.log(fileName);
+			if($.isArray(fileName) == true){
+				fileName = fileName[0]
+			}
+			console.log(fileName);
+			
+			val = val + "&picture=" + fileName;
+			console.log(val);
+			
+			val2.push({name:"picture",value:fileName});
+			console.log(val2);
+			
+			var tmp = JSON.stringify(val2);
+			console.log(tmp);
+        });
+		
+	});
+</script>
+
+</head>
+
+<body>
+	<center>
+    	<h1>
+         	.serialize() | .serializeArray()
+       </h1>
+    </center>
+    
+    <div id="info" class="info">Ready...</div>
+   
+    <center>
+    	<input type="button" class="button" id="process" value="Process"/>
+    </center>
+  
+  <form id="appForm" name="appForm" class="boxA" method="post" action="" enctype="multipart/form-data">
+    	<div>
+        	Textbox: 
+            <input type="text" name="username" class="input" value="Khanh Pham"/>
+        </div>
+        <div>
+       		 Password: 
+             <input type="password" name="password" class="input" value="123456"/>        
+        </div>
+        <div>
+        	File upload: 
+            <input type="file" name="picture" class="input"/>
+        </div>
+        
+        <div>
+        	Selectbox: 
+            <select name="mobile"> 
+                <option value="nokia">Nokia</option>
+                <option value="samsung">Samsung</option>
+                <option value="apple">Apple</option>
+                <option value="htc">HTC</option> 
+            </select>
+        </div>
+        
+        <div>
+        	Radio group: 
+            <input type="radio" name="skill" class="input" value="html"/> HTML 
+            <input type="radio" name="skill" class="input" value="css"/> CSS 
+            <input type="radio" name="skill" class="input" value="js"/> JS 
+            <input type="radio" name="skill" class="input" value="jQuery"/> jQuery   
+        </div>
+        
+        <div>
+        	Buttons: 
+        	<input type="submit" name="btnSubmit" class="input" value="Submit button"/> 
+            <input type="reset" name="btnReset" class="input" value="Reset button"/>
+        </div>
+        
+    </form>
+    
+</body>
+
+</html>

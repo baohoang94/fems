@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Example 01</title>
+</head>
+
+<script type="text/javascript">
+	
+	var myWin;
+	
+	function openWindow() {
+		myWin = window.open("","New window","width = 200, height= 200, top = 300, left = 400");
+		myWin.document.write("Name: " + myWin.name);
+	}
+	
+	function moveByWindow(){
+		myWin.moveBy(10,100);
+		myWin.focus();
+	}
+	
+	function moveToWindow(type){
+		
+		var posX;
+		var posY;
+		
+		switch (type){
+			
+			case "tl":
+				posX	= window.screenX;
+				posY	= window.screenY;
+				break;
+			case "tr":
+				posX	= window.outerWidth - myWin.outerWidth + window.screenX ;
+				posY	= window.screenY;
+				break;
+			case "bl":
+				posX	= window.screenX ;
+				posY	= window.outerHeight - myWin.outerHeight + window.screenY;
+				break;
+			case "br":
+				posX	= window.outerWidth - myWin.outerWidth + window.screenX ;
+				posY	= window.outerHeight - myWin.outerHeight + window.screenY;
+				break;
+		}
+		myWin.moveTo(posX,posY);
+		myWin.focus();
+	}
+	
+</script> 
+
+<body>
+	<input type="button" value="Open window" onClick="openWindow();"/>
+    <input type="button" value="Move by" onClick="moveByWindow();"/>
+    <input type="button" value="Move to" onClick='moveToWindow("br");'/>
+    <div id="content"></div>
+</body>
+</html>

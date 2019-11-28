@@ -1,0 +1,64 @@
+div.my-row {
+	padding: 20px;
+	margin: 10px auto;
+	border: 2px solid #ebe9f9;
+}
+
+#myCarousel .list-group {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#myCarousel .list-group .list-group-item:hover, #myCarousel .list-group .active {
+	background-color: #eee;
+}
+
+#myCarousel .list-group .list-group-item {
+	cursor: pointer;
+	border-radius: 0px;
+}
+
+#myCarousel .carousel-caption{
+	left: 0;
+	bottom: 0;
+	text-align: left;
+	padding: 10px;
+	background-color: #000;
+	opacity: 0.6;
+	width: 100%;
+}
+
+
+/*
+ 	PHONE + WIDE PHONE 	< 450px
+ 	TABLET 				450px -> 1000px
+ 	PC 					> 1000px
+ */
+
+@media (min-width: 1000px)
+{
+	#myCarousel .carousel-controls{
+		display: none;
+	}
+	
+	#myCarousel{
+		padding-right: 33.3333%;
+	}
+}
+
+@media (min-width: 450px) and (max-width: 1000px)
+{
+	#myCarousel .list-group,
+	.carousel-caption p{
+		display: none;
+	}
+}
+
+@media (max-width: 450px)
+{
+	#myCarousel .list-group,
+	.carousel-caption {
+		display: none;
+	}
+}
